@@ -20,10 +20,10 @@ st.info("Como já deve ter percebido, o método st.write() é usado para escrita
 
 st.warning("Como já deve ter percebido, o método st.write() é usado para escrita de texto e informações gerais!")
 
-start, end = st.date_input(label='Date Range: ',
+start, end = st.date_input(label='Intervalo de Data: ',
               value=(datetime.datetime(year=2022, month=5, day=20, hour=16, minute=30), 
                      datetime.datetime(year=2022, month=5, day=30, hour=16, minute=30)),
               key='#date_range',
-              help="The start and end date time",
-              on_change=lambda : st.write("Start and end date time set!"))
-st.write('Start: ', start, "End: ", end)
+              help="Data e Início e Término",
+              on_change=lambda : st.write("Configure a Data de Início e de Término!"))
+st.write('Início: ', start, "Término: ", end)
