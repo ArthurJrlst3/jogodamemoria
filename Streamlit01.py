@@ -18,3 +18,11 @@ st.write("Como já deve ter percebido, o método st.write() é usado para escrit
 st.info("Como já deve ter percebido, o método st.write() é usado para escrita de texto e informações gerais!")
 
 st.warning("Como já deve ter percebido, o método st.write() é usado para escrita de texto e informações gerais!")
+
+start, end = st.date_input(label='Date Range: ',
+              value=(datetime.datetime(year=2022, month=5, day=20, hour=16, minute=30), 
+                     datetime.datetime(year=2022, month=5, day=30, hour=16, minute=30)),
+              key='#date_range',
+              help="The start and end date time",
+              on_change=lambda : st.write("Start and end date time set!"))
+st.write('Start: ', start, "End: ", end)
